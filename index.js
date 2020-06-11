@@ -106,10 +106,10 @@ Car.prototype.drive = function(distance) {
         + Should return a string "Playing with x", x being the favorite toy.
 */
 function Baby(name,age,favoriteToy) {
-  Person.call(this, favoriteToy);
+  Person.call(this, name, age);
   this.favoriteToy = favoriteToy;
-  this.name = name;
-  this.age = age;
+  // this.name = name;
+  // this.age = age;
 }
 
 Baby.prototype = Object.create(Person.prototype);
@@ -121,10 +121,11 @@ Baby.prototype.play = function(){
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Global Binding: The global object provides variables and functions that are available anywhere. By default, those that are built into the language or the environment.
+  Recently, globalThis was added to the language, as a standardized name for a global object, that should be supported across all environments. 
+  2. Implicit Binding: Implicit binding occurs when dot notation is used to invoke a function.
+  3. New Binding: The new binding lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function.
+  4. Explicit Binding: The explicit binding rule allows developers to use the "call" method and pass an explicit reference for the "this" binding. Explicit bindings can also be set using the "apply" method.
 */
 
 
